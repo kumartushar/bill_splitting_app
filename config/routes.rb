@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'bill_events/new' => 'bill_events#new'
+
+  post 'bill_events/create' => 'bill_events#create'
+
+  get '/home' => 'dashboard#home'
+
+  root :to => 'dashboard#home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

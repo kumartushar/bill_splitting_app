@@ -1,0 +1,2 @@
+$("#add_bill").hide();
+$("#bill_event_form").empty().append("<%= escape_javascript(render(:partial=>'bill_event_form', :locals => {:bill_event => @bill_event})); %>").show();

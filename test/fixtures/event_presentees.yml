@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  bill_event_id: 
+  contribution: 9.99
+
+two:
+  user_id: 
+  bill_event_id: 
+  contribution: 9.99

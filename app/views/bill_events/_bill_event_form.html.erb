@@ -1,0 +1,13 @@
+<%= form_for :bill_event, url: "bill_events/create" do |f| %>
+  <%= f.label 'Event Type' %>   : <%= f.select :event_type, [['Snacks','snacks'],['Lunch','lunch'],['Dinner','dinner']] %><br /><br />
+  <%= f.label 'Event Date' %>   : <%= f.text_field :event_date, "data-provide" => 'datepicker' %><br /><br />
+  <%= f.label 'Location' %>     : <%= f.text_field :location %><br /><br />
+  <%= f.label 'Total Amount' %> : <%= f.number_field :total_amount, step: :any %><br /><br />
+	<%= f.label 'Event Presentee With Contribution:' %><br /><br />
+		<% User.all.each do |user| %>
+			<%= radio_button_tag "presentee[#{user.id}][name]", "#{user.first_name}" %><%= "#{user.first_name}" %>
+			<input type="text" id="presentee_<%= user.id %>_contribution" name="<%= "presentee[#{user.id}][contribution]" %>" value="" style="width: 30px; margin-right: 25px"/>
+		<% end %>
+		</br></br></br>
+  <%= f.submit "Save Bill" %>
+<% end %>
