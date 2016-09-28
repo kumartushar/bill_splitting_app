@@ -5,11 +5,11 @@ module ApplicationHelper
 		final_hash.each do |key, value|
 			if value > 0
 				user1 = User.find_by_id(key)
-				final_block << "<div id=\"user_#{user1.id}_block\" class=\"user_owe_block\"><p>#{user1.first_name}</p>"
+				final_block << "<div id=\"user_#{user1.id}_block\" class=\"user_owe_block\"><p class=\"user_name_main\">#{user1.first_name}</p>"
 				final_hash.each do |k, v|
 					if key != k && v < 0
 						user2 = User.find_by_id(k)
-						final_block << "<p><span style=\"color:blue\">gets back " 
+						final_block << "<p><span class=\"owe_info_span\">- gets back " 
 						if value.abs > v.abs
 							final_block << "$#{v.abs}"
 							final_hash[k] = 0
