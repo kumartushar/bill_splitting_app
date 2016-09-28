@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160927132843) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bill_events", force: true do |t|
     t.text     "event_type"
     t.date     "event_date"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 20160927132843) do
     t.datetime "updated_at"
   end
 
-  add_index "event_presentees", ["bill_event_id"], name: "index_event_presentees_on_bill_event_id"
-  add_index "event_presentees", ["user_id"], name: "index_event_presentees_on_user_id"
+  add_index "event_presentees", ["bill_event_id"], name: "index_event_presentees_on_bill_event_id", using: :btree
+  add_index "event_presentees", ["user_id"], name: "index_event_presentees_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "first_name"
