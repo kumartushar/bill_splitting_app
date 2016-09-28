@@ -1,13 +1,21 @@
-<%= form_for :bill_event, url: "bill_events/create" do |f| %>
+<%= form_for :bill_event, url: "bill_events/create", :html => {:class => 'bill_event_form', :id => "form_bill_event"} do |f| %>
   <%= f.label 'Event Type' %>   : <%= f.select :event_type, [['Snacks','snacks'],['Lunch','lunch'],['Dinner','dinner']] %><br /><br />
+  
   <%= f.label 'Event Date' %>   : <%= f.text_field :event_date, "data-provide" => 'datepicker' %><br /><br />
+  
   <%= f.label 'Location' %>     : <%= f.text_field :location %><br /><br />
-  <%= f.label 'Total Amount' %> : <%= f.number_field :total_amount, step: :any %><br /><br />
-	<%= f.label 'Event Presentee With Contribution:' %><br /><br />
+  
+  <%= f.label 'Total Amount' %> : <%= f.number_field :total_amount, step: :any, min: '0', :id => "total_bill_amt" %><br /><br />
+	
+	<%= f.label 'Event Presentee With Contribution:' %>
+	<div class="presentee_block">
 		<% User.all.each do |user| %>
-			<%= radio_button_tag "presentee[#{user.id}][name]", "#{user.first_name}" %><%= "#{user.first_name}" %>
-			<input type="text" id="presentee_<%= user.id %>_contribution" name="<%= "presentee[#{user.id}][contribution]" %>" value="" style="width: 30px; margin-right: 25px"/>
+				<%= check_box_tag "presentee[#{user.id}][name]", "#{user.first_name}", false,  :class => "presentee_check_box", :user_id => user.id %><%= "#{user.first_name}" %>
+
+				<input type="text" id="presentee_<%= user.id %>_contribution" name="<%= "presentee[#{user.id}][contribution]" %>" value="0" hidden style="width: 30px; margin-right: 25px"/>
 		<% end %>
-		</br></br></br>
-  <%= f.submit "Save Bill" %>
+	</div>
+	<br /><br />
+  <%= f.submit "Save Bill", :class => "frm_submit_btn", :id => "bill_event_submit_btn" %>
+  <%= button_tag "Cancel", type: :reset, :id => "bill_event_cancel_btn", :class => "cancel_btn" %>
 <% end %>

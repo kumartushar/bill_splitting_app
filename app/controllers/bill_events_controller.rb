@@ -11,8 +11,9 @@ class BillEventsController < ApplicationController
   	begin
   		bill_event = BillEvent.create_bill_event(bill_event_params)
   		EventPresentee.add_event_presentees(params[:presentee], bill_event.id)  unless bill_event.blank?
-  		flash[:success] = "Bill Event Created"
+  		flash[:success] = "Bill Event Added Successfully."
   	rescue Exception => e
+      flash[:error] = "Error while adding bill event"
   		Rails.logger.error "message: #{e.message}"
   	ensure
   		redirect_to ("/home")

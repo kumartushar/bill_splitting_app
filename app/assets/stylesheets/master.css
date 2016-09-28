@@ -3,7 +3,6 @@ body {
 	font-size: 12px;
 	color: #4d5051;
 	background-color: #d6d6d6;
-	background-image: url(../images/top-rept.jpg);
 	background-repeat: repeat-x;
 	background-position: left top;
 	margin: 0px;
@@ -21,7 +20,6 @@ a:hover {
 	text-decoration: none;
 }
 .page-in {
-	background-image: url(../images/bottom-rept.jpg);
 	background-repeat: repeat-x;
 	background-position: left bottom;
 	width: 100%;
@@ -36,7 +34,6 @@ a:hover {
 	float: left;
 }
 .header-top {
-	background-image: url(../images/header-top.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	width: 1000px;
@@ -55,7 +52,6 @@ a:hover {
 	color: #000000;
 }
 .header-bottom {
-	background-image: url(../images/header.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	width: 1000px;
@@ -71,7 +67,6 @@ a:hover {
 	margin-left: 27px;
 }
 .topmenu {
-	background-image: url(../images/menu-bg.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	width: 1000px;
@@ -84,7 +79,6 @@ a:hover {
 	list-style-type: none;
 }
 .topmenu ul li {
-	background-image: url(../images/devider.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	height: 74px;
@@ -111,28 +105,25 @@ a:hover {
 	cursor: pointer;
 }
 .topmenu ul li a:hover {
-	background-image: url(../images/menu-left.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	color: #000000;
 }
 .topmenu ul li a:hover span {
-	background-image: url(../images/menu-right.jpg);
 	background-repeat: no-repeat;
 	background-position: right top;
 	color: #000000;
 }
 .content {
 	background-color: #FFFFFF;
-	background-image: url(../images/body-top.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	width: 952px;
 	float: left;
 	padding: 30px 24px 0px 24px;
+	height: 626px;
 }
 .content-left {
-	background-image: url(../images/vline.jpg);
 	background-repeat: repeat-y;
 	background-position: right top;
 	width: 621px;
@@ -161,14 +152,12 @@ a:hover {
 ul.list1 {
 	margin-top: 5px;
 	margin-left: 25px;
-	list-style-image: url(../images/bullet.jpg);
 }
 ul.list1 li {
 	padding-top: 3px;
 	padding-bottom: 3px;
 }
 .row2 {
-	background-image: url(../images/section-bg.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	width: 591px;
@@ -191,7 +180,6 @@ a.more {
 	line-height: 30px;
 	color: #282828;
 	text-decoration: none;
-	background-image: url(../images/more-btn.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	text-align: center;
@@ -216,7 +204,6 @@ a.more:hover {
 	font-size: 18px;
 	line-height: 50px;
 	color: #FFFFFF;
-	background-image: url(../images/sidebar1.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	height: 50px;
@@ -228,7 +215,6 @@ a.more:hover {
 	list-style-type: none;
 }
 .mainmenu ul li {
-	background-image: url(../images/bullet.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-top: 3px;
@@ -248,7 +234,6 @@ a.more:hover {
 	font-size: 18px;
 	line-height: 50px;
 	color: #FFFFFF;
-	background-image: url(../images/sidebar2.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	height: 50px;
@@ -269,7 +254,6 @@ a.more:hover {
 }
 .footer {
 	line-height: 69px;
-	background-image: url(../images/footer.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	width: 952px;
@@ -308,4 +292,56 @@ a.more:hover {
 }
 .footer ul li a:hover {
 	text-decoration: underline;
+}
+.table-condensed {
+  position: absolute;
+  left: 32%;
+  top: 35%;
+  background-color: LightGreen;
+}
+.bill_event_form {
+	padding: 5px;
+  background-color: lightblue;
+}
+.frm_submit_btn {
+	padding: 4px;
+  background-color: lightgreen;
+  width: 79px;
+}
+.success_msg {
+  position: relative;
+  left: 233px;
+  color: green;
+  font-size: large;
+}
+.add_btn {
+  padding: 6px;
+  background-color: aqua;
+  width: 82px;
+ }
+.cancel_btn {
+  margin-left: 8px;
+  padding: 4px;
+  width: 65px;
+}
+.presentee_block {
+	    position: relative;
+    left: 28px;
+    padding: 4px;
+    margin: 4px;
+    height: 24px;
+    background-color: beige;
+    width: 338px;
+}
+.who_owes_what_block {
+  margin-top: 32px;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+.user_owe_block {
+    padding: 4px;
+    line-height: 17px;
+    background-color: aquamarine;
+    width: 219px;
+    border-style: inset;
 }
