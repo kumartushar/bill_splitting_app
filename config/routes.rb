@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'bill_events/new' => 'bill_events#new'
 
   post 'bill_events/create' => 'bill_events#create'
